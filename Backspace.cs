@@ -8,7 +8,7 @@ public static void Main(string[] args)
             {
                 if (c == '<')
                 {
-                    if (stack.Any())  // Make sure the stack isn't empty
+                    if (stack.Any()) 
                         stack.Pop();
                 }
                 else
