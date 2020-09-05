@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kattis
+{
+    class Nasty_Hacks
+    {
+        public static void Main(string[] args)
+        {
+            
+            int input = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i<input; i++)
+			{
+                string sInput = Console.ReadLine();
+                string[] newArray = sInput.Split(' ');
+
+                int r = int.Parse(newArray[0]);     //Expected revenue if not advertised
+                int e = int.Parse(newArray[1]);     //Expected revenue if advertised
+                int c = int.Parse(newArray[2]);     //Cost of advertising
+
+                if(r < e && (e-c) > r)
+                {
+                    Console.WriteLine("advertise");
+                }
+                else if((e-c) == r)
+                {
+                    Console.WriteLine("does not matter");
+                }
+                else
+                {
+                    Console.WriteLine("do not advertise");
+                }
+            }
+
+        }
+
+        
+    }
+}
